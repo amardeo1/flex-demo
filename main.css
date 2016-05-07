@@ -1,0 +1,41 @@
+body{
+	margin: 0px;
+}
+
+body > div:nth-child(1){
+	display: flex;
+	flex-flow: row wrap; //row indicates it will grow in horizintal direction and wrap indicates that elements will wrap under one another if there is not enough space
+}
+
+body > div:nth-child(1) > header, nav, main, aside, footer{
+	background: #ccc;
+	border-radius: 7px;
+	margin: 5px;
+	padding:20px;
+}
+
+body > div:nth-child(1) > header{
+	order: 1;				//order of appearance in flex container
+	height: 100px;
+	flex: 0 1 100%;      	//100% specifies the width of the header
+}
+
+body > div:nth-child(1) > nav{
+	order: 2;				//order of appearance in flex container
+	flex: 0 1 200px;      	//100% specifies the width of the header
+}
+
+body > div:nth-child(1) > main{
+	order: 3;				//order of appearance in flex container
+	min-height: 400px;
+	flex: 1;     	//100% specifies the width of the header
+}
+body > div:nth-child(1) > aside{
+	order: 4;				//order of appearance in flex container
+	flex: 0 1 200px;      	//100% specifies the width of the header
+}
+body > div:nth-child(1) > footer{
+	order: 5;				//order of appearance in flex container
+	height: 100px;
+	flex: 0 1 100%;      	//100% specifies the width of the header
+}
